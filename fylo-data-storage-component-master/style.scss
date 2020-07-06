@@ -1,0 +1,102 @@
+$Pale-Blue: hsl(243, 100%, 93%);
+$Grayish-Blue: hsl(229, 7%, 55%);
+$Dark-Blue: hsl(228, 56%, 26%);
+$Very-Dark-Blue: hsl(229, 57%, 11%);
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.attribution {
+     font-size: 11px; 
+     text-align: center;
+     a { 
+         color: hsl(228, 45%, 44%);
+       }
+ }
+body{
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    background-color: $Very-Dark-Blue;
+}
+ 
+.slider{
+    width: 100%;
+}
+@media only screen and (min-width: 1440px){
+    .fluid-container{
+        background-color: $Very-Dark-Blue;
+        height:100%;
+        width:100%;
+        background-attachment: fixed;
+        background-image: url("./images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 100% auto;
+        
+    }
+}
+
+@media only screen and (max-width:375px){
+
+    .fluid-container{
+        background-color: $Very-Dark-Blue;
+        height:100%;
+        width:100%;
+        background-attachment: fixed;
+        background-image: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:100% 100%;
+        
+    }
+}
+
+/*.slider{
+    appearance: none;
+    background-color: #9a905d;
+    border-radius: 50px;
+    /*background-image: linear-gradient(45deg ,rgb(255, 152, 149),rgb(254, 87, 149));
+
+}*/
+
+input[type='range'] {
+    height:1.5em;
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    border-radius: 50px;
+    background-color: rgb(255, 152, 149);
+    padding:2px;
+   
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+   
+    -webkit-appearance: none;
+    
+   
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    
+    -webkit-appearance: none;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 70%;
+    cursor: ew-resize;
+    background: black;
+    box-shadow: -10vw 0 30vw 10vw rgb(254, 87, 149);
+
+  }
+
+  .slider{
+      &:focus{
+        outline:none;
+      }
+      
+  }
