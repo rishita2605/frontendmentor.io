@@ -16,6 +16,7 @@ $Very-Dark-Blue: hsl(229, 57%, 11%);
      a { 
          color: hsl(228, 45%, 44%);
        }
+    margin-top:45%;
  }
 body{
     display: flex;
@@ -105,10 +106,10 @@ main {
 }
 
 .rangeslider__fill {
-  background: -webkit-linear-gradient(left, #abe0ed, #46b7d5);
-  background: -o-linear-gradient(right, #abe0ed, #46b7d5);
-  background: -moz-linear-gradient(right, #abe0ed, #46b7d5);
-  background: linear-gradient(to right, #abe0ed, #46b7d5);
+  background: linear-gradient(45deg ,rgb(255, 152, 149),rgb(254, 87, 149));
+  background: linear-gradient(45deg ,rgb(255, 152, 149),rgb(254, 87, 149));
+  background: linear-gradient(45deg ,rgb(255, 152, 149),rgb(254, 87, 149));
+  background: linear-gradient(45deg ,rgb(255, 152, 149),rgb(254, 87, 149));
   position: absolute;
   display: flex;
   
@@ -212,6 +213,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
       width: 3em;
       border-radius: 10px;
       margin-right: 1em;
+      cursor: pointer;
   }
   .parent-1{
       display: flex;
