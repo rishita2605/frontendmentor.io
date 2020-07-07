@@ -18,6 +18,8 @@ $Very-Dark-Blue: hsl(229, 57%, 11%);
        }
  }
 body{
+    display: flex;
+    flex-direction: row;
     height:100vh;
     width:100vw;
     overflow: hidden;
@@ -41,20 +43,7 @@ body{
     }
 }
 
-@media only screen and (max-width:375px){
 
-    .fluid-container{
-        background-color: $Very-Dark-Blue;
-        height:100%;
-        width:100%;
-        background-attachment: fixed;
-        background-image: url("./images/bg-mobile.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size:100% 100%;
-        
-    }
-}
 
 /*.slider{
     appearance: none;
@@ -64,39 +53,140 @@ body{
 
 }*/
 
-input[type='range'] {
-    height:1.5em;
-    overflow: hidden;
-    width: 100%;
-    -webkit-appearance: none;
-    border-radius: 50px;
-    background-color: rgb(255, 152, 149);
-    padding:2px;
-   
-  }
-  
-  input[type='range']::-webkit-slider-runnable-track {
-   
-    -webkit-appearance: none;
-    
-   
-  }
 
-  input[type='range']::-webkit-slider-thumb {
-    
-    -webkit-appearance: none;
-    width: 0.8em;
-    height: 0.8em;
-    border-radius: 70%;
-    cursor: ew-resize;
-    background: black;
-    box-shadow: -10vw 0 30vw 10vw rgb(254, 87, 149);
+/*styling the slider*/
+@charset "UTF-8";
+main {
+  width: 70%;
+  margin: 8rem auto 0;
+}
 
-  }
 
-  .slider{
-      &:focus{
-        outline:none;
-      }
-      
-  }
+
+
+/* original css */
+.rangeslider,
+.rangeslider__fill {
+  display: block;
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.rangeslider {
+  background: #e6e6e6;
+  position: relative;
+}
+
+.rangeslider--horizontal {
+  height: 20px;
+  width: 100%;
+}
+
+.rangeslider--vertical {
+  width: 20px;
+  min-height: 150px;
+  max-height: 100%;
+}
+
+.rangeslider--disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+
+.rangeslider__fill {
+  background: -webkit-linear-gradient(left, #abe0ed, #46b7d5);
+  background: -o-linear-gradient(right, #abe0ed, #46b7d5);
+  background: -moz-linear-gradient(right, #abe0ed, #46b7d5);
+  background: linear-gradient(to right, #abe0ed, #46b7d5);
+  position: absolute;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+  top: 0;
+  height: 100%;
+}
+
+.rangeslider--vertical .rangeslider__fill {
+  bottom: 0;
+  width: 100%;
+}
+
+.rangeslider__handle {
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+  position: absolute;
+  background-size: 100%;
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 22px;
+  -webkit-border-radius: 22px;
+  border-radius: 70%;
+}
+
+
+/*color of thumb when active*/
+.rangeslider__handle:active {
+  background-size: 100%;
+  background-color: pink;
+}
+
+.rangeslider--horizontal .rangeslider__handle {
+  top: -10px; /*else the top of thumb touches the top of range slider*/
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+}
+
+.rangeslider--vertical .rangeslider__handle {
+  left: -10px;
+  touch-action: pan-x;
+  -ms-touch-action: pan-x;
+}
+
+input[type="range"]:focus + .rangeslider .rangeslider__handle {
+  outline:none;
+  /*behaviour of thumb when focussed*/
+}
+/*end of slider styling*/
+
+
+.parent{
+    display:flex;
+    flex-direction:column;
+    padding:2em;
+    height: 20%;
+    background-color: $Dark-Blue;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+
+
+/*media query starts here*/
+@media only screen and (max-width:375px){
+
+    body{
+        
+    }
+    .fluid-container{
+        background-color: $Very-Dark-Blue;
+        max-height:100%;
+        max-width:100%;
+        background-attachment: fixed;
+        background-image: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+    }
+
+}
