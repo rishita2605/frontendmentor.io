@@ -24,14 +24,31 @@ body{
     width:100vw;
     overflow: hidden;
     background-color: $Very-Dark-Blue;
+    color:whitesmoke;
+    
 }
  
 .slider{
     width: 100%;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 
-
+.usage{
+    font-size:0.9em;
+    display: block;
+}
+.startend{
+    display:flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    margin-top: -10px;
+    font-weight:400;
+}
 
 
 /*.slider{
@@ -66,19 +83,20 @@ main {
 }
 
 .rangeslider {
-  background: #e6e6e6;
+  background: $Very-Dark-Blue;
   position: relative;
 }
 
 .rangeslider--horizontal {
-  height: 20px;
-  width: 100%;
+  height: 0.8em;
+  width: 98%;
 }
 
 .rangeslider--vertical {
   width: 20px;
   min-height: 150px;
   max-height: 100%;
+  
 }
 
 .rangeslider--disabled {
@@ -92,6 +110,8 @@ main {
   background: -moz-linear-gradient(right, #abe0ed, #46b7d5);
   background: linear-gradient(to right, #abe0ed, #46b7d5);
   position: absolute;
+  display: flex;
+  
 }
 
 .rangeslider--horizontal .rangeslider__fill {
@@ -106,18 +126,14 @@ main {
 
 .rangeslider__handle {
   background: white;
-  border: 1px solid #ccc;
   cursor: pointer;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-
+  display: flex;
+  width: 0.9em;
+  height: 0.9em;
   text-align: center;
   position: absolute;
   background-size: 100%;
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  
   -moz-border-radius: 22px;
   -webkit-border-radius: 22px;
   border-radius: 70%;
@@ -131,7 +147,8 @@ main {
 }
 
 .rangeslider--horizontal .rangeslider__handle {
-  top: -10px; /*else the top of thumb touches the top of range slider*/
+  
+  top: 0; /*else the top of thumb touches the top of range slider*/
   touch-action: pan-y;
   -ms-touch-action: pan-y;
 }
@@ -147,16 +164,25 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   /*behaviour of thumb when focussed*/
 }
 /*end of slider styling*/
-
+.slide{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1.2em;
+    border-radius: 10px;
+    background-color: $Very-Dark-Blue;
+    
+}
 
 .parent-2{
     display:flex;
     flex-direction:column;
     padding:2em;
-    height: 20%;
+    height: 23vh;
     background-color: $Dark-Blue;
     border-radius: 10px;
-    justify-content: center;
+    
 
 }
 
@@ -165,26 +191,64 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 @media only screen and (max-width:375px){
 
     body{
-        padding:2em;
+        padding:2.5em;
         background-image: url("./images/bg-mobile.png");
         max-height:100%;
         max-width:100%;
         background-size:cover;
     }
-    .flex-row{
-        display: flex;
-        flex-direction: row;
+
+    .fluid-container{
+        height:100%;
         width: 100%;
     }
-  .icon{
-      background-color: $Very-Dark-Blue;
-      height:20%;
-      width: 20%;
-
-
-
-  }
     
+  .icon{
+      display: flex;
+      background-color: $Very-Dark-Blue;
+      justify-content: center;
+      align-items:center;
+      height:3em;
+      width: 3em;
+      border-radius: 10px;
+      margin-right: 1em;
+  }
+  .parent-1{
+      display: flex;
+      flex-direction: column;
+      background-color: $Dark-Blue;
+      height:29vh;
+      justify-content: center;
+      align-items:flex-start;
+      padding:3em;
+      border-radius: 15px 80px 15px 15px;
+      margin-top: 28%;
+      margin-bottom: 1em;
+      
+  }
+
+  .logo{
+      padding-bottom: 2em;
+  }
+ .dialogue-2{
+     position:absolute;
+     height: 10vh;
+     width: 50vw;
+     background-color: whitesmoke;
+     align-self: center;
+     top:80%;
+     border-radius: 0.6em;
+     color:black;
+     text-align: center;
+     font-weight: 700;
+     font-size:1.8em;
+     padding:0.3em;
+ }
+
+ .light-2{
+    color:gray;
+    font-size:0.5em;
+ }
 
 }
 

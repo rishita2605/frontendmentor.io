@@ -181,29 +181,21 @@
   //custom slider javascript
   var $element = $('input[type="range"]');
   var $handle;
-
   $element
     .rangeslider({
       polyfill: false,
       onInit: function() {
         $handle = $('.rangeslider__handle', this.$range);
-        updateHandle($handle[0], this.value);
+        updateHandle($handle, this.value);
       }
     })
     .on('input', function() {
-      updateHandle($handle[0], this.value);
+      updateHandle($handle, this.value);
     });
 
 
-  //updating the values here
-
-  //for the dialogue box
-  function updateHandle(el, val) {
-    console.log(val);
-    //element here is the thumb
-
-    //el.textContent = " " + val + "GB";
-  }
+  
+  
 /*not required
   $(document).ready(function(){
 
@@ -221,5 +213,19 @@
 
   });
 */
-console.log("Hello");
-setTimeout(() => {  console.log("World!"); }, 2000);
+
+
+//updating the values here
+  //for the dialogue box
+
+//variables
+
+
+function updateHandle(el, val) {
+  
+  
+  //element here is the thumb
+  console.log(val);
+  el.textContent = " " + val + "GB";
+  //el.textContent = " " + val + "GB";
+}
