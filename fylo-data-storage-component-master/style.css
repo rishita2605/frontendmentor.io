@@ -9,6 +9,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 45%;
 }
 
 .attribution a {
@@ -106,8 +107,10 @@ main {
 }
 
 .rangeslider__fill {
-  background: -webkit-gradient(linear, left top, right top, from(#abe0ed), to(#46b7d5));
-  background: linear-gradient(to right, #abe0ed, #46b7d5);
+  background: linear-gradient(45deg, #ff9895, #fe5795);
+  background: linear-gradient(45deg, #ff9895, #fe5795);
+  background: linear-gradient(45deg, #ff9895, #fe5795);
+  background: linear-gradient(45deg, #ff9895, #fe5795);
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +224,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     width: 3em;
     border-radius: 10px;
     margin-right: 1em;
+    cursor: pointer;
   }
   .parent-1 {
     display: -webkit-box;
@@ -265,6 +269,10 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   .light-2 {
     color: gray;
     font-size: 0.5em;
+    display: inline;
+  }
+  .val {
+    display: inline;
   }
 }
 

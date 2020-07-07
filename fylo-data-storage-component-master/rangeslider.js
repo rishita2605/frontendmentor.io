@@ -218,14 +218,16 @@
 //updating the values here
   //for the dialogue box
 
-//variables
-
 
 function updateHandle(el, val) {
   
-  
+  $textgb=$(".gb");
+  const left=1000-val;
+  const a=document.querySelector(".con");
+  console.log(a.textContent);
   //element here is the thumb
-  console.log(val);
-  el.textContent = " " + val + "GB";
-  //el.textContent = " " + val + "GB";
+  textgb.textContent = " " + val + "GB";
+  a.textContent=""+left;
+
+  
 }
