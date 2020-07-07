@@ -265,6 +265,10 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   .light-2 {
     color: gray;
     font-size: 0.5em;
+    display: inline;
+  }
+  .val {
+    display: inline;
   }
 }
 

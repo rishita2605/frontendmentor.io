@@ -223,9 +223,11 @@
 
 function updateHandle(el, val) {
   
+  $textgb=$(".gb");
   
   //element here is the thumb
-  console.log(val);
-  el.textContent = " " + val + "GB";
-  //el.textContent = " " + val + "GB";
+  console.log(vale);
+  textgb.textContent = " " + val + "GB";
+
+  
 }
