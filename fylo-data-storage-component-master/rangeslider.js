@@ -218,8 +218,6 @@
 //updating the values here
   //for the dialogue box
 
-//variables
-
 
 function updateHandle(el, val) {
   
