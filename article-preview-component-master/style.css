@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #edf2f8;
+}
+
+.main {
+  background-color: white;
+}
+
+@media screen and (min-aspect-ratio: 16 / 10) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media screen and (min-aspect-ratio: 9 / 16) {
+  body {
+    background-color: indianred;
+  }
+}
+/*# sourceMappingURL=style.css.map */
