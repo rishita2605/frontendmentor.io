@@ -221,7 +221,7 @@
 
 function updateHandle(el, val) {
   
-  $textgb=$(".gb");
+  const textgb=document.querySelector(".gb");
   const left=1000-val;
   const a=document.querySelector(".con");
   console.log(a.textContent);

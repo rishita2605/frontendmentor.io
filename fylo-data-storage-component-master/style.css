@@ -6,16 +6,6 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  margin-top: 45%;
-}
-
-.attribution a {
-  color: #3e52a3;
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,8 +186,30 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   border-radius: 10px;
 }
 
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #0c122c;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  width: 3em;
+  border-radius: 10px;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.logo {
+  padding-bottom: 2em;
+}
+
 /*media query starts here*/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 375px), screen and (max-width: 500px) {
   body {
     padding: 2.5em;
     background-image: url("./images/bg-mobile.png");
@@ -208,23 +220,6 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   .fluid-container {
     height: 100%;
     width: 100%;
-  }
-  .icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #0c122c;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 3em;
-    width: 3em;
-    border-radius: 10px;
-    margin-right: 1em;
-    cursor: pointer;
   }
   .parent-1 {
     display: -webkit-box;
@@ -246,20 +241,21 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     border-radius: 15px 80px 15px 15px;
     margin-top: 28%;
     margin-bottom: 1em;
+    width: 100%;
   }
-  .logo {
-    padding-bottom: 2em;
+  .parent-2 {
+    width: 100%;
   }
   .dialogue-2 {
     position: absolute;
     height: 10vh;
-    width: 50vw;
+    width: 47vw;
     background-color: whitesmoke;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    top: 80%;
-    border-radius: 0.6em;
+    top: 69%;
+    border-radius: 0.4em;
     color: black;
     text-align: center;
     font-weight: 700;
@@ -276,7 +272,7 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px), screen and (min-width: 650px) {
   .fluid-container {
     background-color: #0c122c;
     height: 100%;
@@ -287,5 +283,76 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     background-position: right bottom;
     background-size: 100% auto;
   }
+  .parent-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #1d2c67;
+    height: 25vh;
+    width: 22vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 3em;
+    border-radius: 15px 80px 15px 15px;
+    margin-top: 15em;
+    margin-left: 21%;
+  }
+  .parent-2 {
+    position: absolute;
+    height: 20vh;
+    margin-top: 17em;
+    width: 34vw;
+    margin-right: 21%;
+    margin-left: 50%;
+  }
+  .dialogue-2 {
+    display: none;
+  }
+  .dialogue-1 {
+    position: absolute;
+    height: 20vh;
+    width: 30vw;
+    background-image: url("./images/dialogue box.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 2em;
+    top: -10vh;
+    font-weight: 700;
+    left: 10vw;
+  }
+  .one {
+    position: relative;
+    font-size: 2em;
+  }
+  .light-2 {
+    color: gray;
+    font-size: 1em;
+    display: inline;
+  }
+  .slider {
+    position: static;
+  }
+}
+
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  top: 95%;
+  margin-left: 2em;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 /*# sourceMappingURL=style.css.map */
