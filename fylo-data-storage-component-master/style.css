@@ -6,6 +6,19 @@
   font-family: 'Raleway', sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 45%;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+>>>>>>> 5195bf449f71841be11a44fb25c8bc9f587ed4aa
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +234,26 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
     height: 100%;
     width: 100%;
   }
+<<<<<<< HEAD
+=======
+  .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #0c122c;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 10px;
+    margin-right: 1em;
+    cursor: pointer;
+  }
+>>>>>>> 5195bf449f71841be11a44fb25c8bc9f587ed4aa
   .parent-1 {
     display: -webkit-box;
     display: -ms-flexbox;
