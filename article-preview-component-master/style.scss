@@ -5,21 +5,27 @@
 }
 
 body{
+    display: flex;
     height:100vh;
     width: 100vw;
     background-color: rgb(237, 242, 248);
+    justify-content: center;
+    align-items: center;
 }
 
 .main{
     background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 90%;
 }
-@media screen and (min-aspect-ratio:16/10){
+
+@media screen and (min-aspect-ratio:17/10){
     body{
-        background-color: yellowgreen;
+        background-color: pink;
     }
 }
 
-@media screen and (min-aspect-ratio:9/16){
+@media screen and (max-aspect-ratio:9/16){
     body{
         background-color: indianred;
     }

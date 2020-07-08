@@ -6,22 +6,33 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100vh;
   width: 100vw;
   background-color: #edf2f8;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main {
   background-color: white;
+  height: 90%;
+  width: 90%;
 }
 
-@media screen and (min-aspect-ratio: 16 / 10) {
+@media screen and (min-aspect-ratio: 17 / 10) {
   body {
-    background-color: yellowgreen;
+    background-color: pink;
   }
 }
 
-@media screen and (min-aspect-ratio: 9 / 16) {
+@media screen and (max-aspect-ratio: 9 / 16) {
   body {
     background-color: indianred;
   }
