@@ -40,9 +40,7 @@ body{
     display: flex;
     
 }
-.share-after{
-    display: none;
-}
+
 .profile{
     border-radius: 70%;
     
@@ -53,6 +51,7 @@ body{
     width:100%;
     height:5.5em;
     margin-top:-0.5em;
+    
     
 }
 .name{
@@ -69,7 +68,7 @@ body{
 .details{
     padding-left: 1em;
 }
-
+/*media query start*/
 @media screen and (min-aspect-ratio:17/10){
     /*for desktop*/
     body{
@@ -98,7 +97,7 @@ body{
         margin: 4em 2em 4em 2em;
     }
     .text-content{
-        padding: 2.1em 1.8em 0 2em;
+        padding: 2.1em 1.8em 0 1.5em;
 
     }
     
@@ -110,9 +109,36 @@ body{
     }
     .footer{
         padding: 1.7em 0 0 2em;
+        border-radius: 0 0 1em 1em;
+    }
+    .share-after{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        border-radius:0 0 1em 1em;
+        background-color: rgb(73, 85, 107);
+        height:4.8em;
+        margin-top: -0.7em;
+        left:2.2em;
+        padding:1.7em 0 0 2em;
+        width: 83%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size:0.9em;
+        color:rgb(129, 141, 163);
+        font-weight: 500;
+        transform:scaleY(0);
+        opacity:0;
+        transition: all 200ms ease-in;
+        
+    }
+    .social{
+        margin-left: 1.8em;
+    }
+    .icon{
+        margin-right:0.9em;
     }
 }
-
+/*end of media query*/
 p{
     margin:0;
     background-color: white;
@@ -124,23 +150,24 @@ p{
     display: flex;
     appearance:none;
     border:none;
-    background-color:rgb(236, 239, 244);
+    background-color:rgb(236, 242, 249);
     height: 2.4em;
     width: 2.4em;
     border-radius: 70%;
     margin-left: 3.5em;
+    margin-top:0.5em;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    img{
+    transform: scale(1);
+    transition: all 200ms ease;
+    .share-img{
         pointer-events: none;
-    }
-    &:hover{
-        background-color:rgb(217, 218, 219) ;
-        
     }
     &:focus{
         outline: none;
+        transition: all 200ms ease;
     }
+
 
 }
