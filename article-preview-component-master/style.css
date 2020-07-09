@@ -127,15 +127,38 @@ p {
   background-color: white;
 }
 
-button {
-  background-color: transparent;
-  outline: none;
+/*rgb(236, 239, 244);*/
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
-  border-radius: 70%;
-  padding-left: 4em;
-  padding-top: -2em;
   background-color: #eceff4;
-  height: 1em;
-  width: 1em;
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 70%;
+  margin-left: 3.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.btn img {
+  pointer-events: none;
+}
+
+.btn:hover {
+  background-color: #d9dadb;
+}
+
+.btn:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

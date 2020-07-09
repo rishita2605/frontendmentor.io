@@ -1,9 +1,3 @@
-@mixin removeStyle(){
-    background-color: transparent;
-    outline: none;
-    border:none;
-
-}
 
 *{
     padding: 0;
@@ -123,12 +117,30 @@ p{
     margin:0;
     background-color: white;
 }
-button{
-    @include removeStyle();
+
+
+/*rgb(236, 239, 244);*/
+.btn{
+    display: flex;
+    appearance:none;
+    border:none;
+    background-color:rgb(236, 239, 244);
+    height: 2.4em;
+    width: 2.4em;
     border-radius: 70%;
-    padding-left: 4em;
-    padding-top: -2em;
-    background-color: rgb(236, 239, 244);
-    height: 1em;
-    width: 1em;
+    margin-left: 3.5em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img{
+        pointer-events: none;
+    }
+    &:hover{
+        background-color:rgb(217, 218, 219) ;
+        
+    }
+    &:focus{
+        outline: none;
+    }
+
 }
