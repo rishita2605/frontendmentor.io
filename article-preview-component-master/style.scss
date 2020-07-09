@@ -52,6 +52,7 @@ body{
     height:5.5em;
     margin-top:-0.5em;
     
+    
 }
 .name{
     color:rgb(73, 85, 107);
@@ -112,6 +113,8 @@ body{
     }
     .share-after{
         position: absolute;
+        display: flex;
+        flex-direction: row;
         border-radius:0 0 1em 1em;
         background-color: rgb(73, 85, 107);
         height:4.8em;
@@ -119,11 +122,20 @@ body{
         left:2.2em;
         padding:1.7em 0 0 2em;
         width: 83%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size:0.9em;
         color:rgb(129, 141, 163);
-        font-weight: 700;
+        font-weight: 500;
+        transform:scaleY(0);
+        opacity:0;
+        transition: all 200ms ease-in;
         
+    }
+    .social{
+        margin-left: 1.8em;
+    }
+    .icon{
+        margin-right:0.9em;
     }
 }
 /*end of media query*/
