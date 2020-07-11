@@ -12,16 +12,12 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #edf2f8;
-  /*font-family: 'M PLUS Rounded 1c', sans-serif;*/
-  font-family: 'Lato', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  /*font-family: 'Lato', sans-serif;*/
 }
 
 .main {
   background-color: white;
-  border-radius: 1em 1em 0 0;
-}
-
-.img-div {
   border-radius: 1em 1em 0 0;
 }
 
@@ -76,29 +72,91 @@ body {
   padding-left: 1em;
 }
 
+.img-div {
+  background-image: url("./images/drawers.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 /*media query start*/
-@media screen and (min-aspect-ratio: 17 / 10) {
+@media screen and (min-aspect-ratio: 16 / 9), screen and (min-width: 768px) {
   /*for desktop*/
   body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #edf2f8;
+  }
+  .share-after {
+    display: none;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 272px;
+    width: 717px;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 0em 1em 4em rgba(73, 85, 107, 0.15);
+            box-shadow: 0em 1em 4em rgba(73, 85, 107, 0.15);
+  }
+  .img-div {
+    height: 100%;
+    width: 47em;
+    background-size: cover;
+    background-position: unset;
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  .text-content {
+    padding: 2.2em 3.5em 0 2.2em;
+  }
+  .footer {
+    background-color: peachpuff;
+    position: absolute;
+    left: 44%;
+    top: 57.5%;
+    width: 32.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .heading {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 0.7em;
+  }
+  .content {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
   }
 }
 
-@media screen and (max-aspect-ratio: 9 / 16) {
+@media screen and (max-aspect-ratio: 9 / 16), screen and (max-width: 390px) {
   /*for mobile*/
   body {
     background-color: #edf2f8;
   }
   .img-div {
-    background-image: url("./images/drawers.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    border-radius: 1em 1em 0 0;
     height: 50%;
     width: 100%;
   }
   .main {
-    width: 87%;
+    width: 67em;
     height: 67%;
     margin: 4em 2em 4em 2em;
   }
@@ -133,7 +191,7 @@ body {
     margin-top: -0.7em;
     left: 2.2em;
     padding: 1.7em 0 0 2em;
-    width: 83%;
+    min-width: 83%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.9em;
     color: #818da3;
