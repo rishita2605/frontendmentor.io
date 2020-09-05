@@ -1,6 +1,111 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
     a { 
         color: hsl(228, 45%, 44%); }
 
+}
+
+.container-fluid{
+    background-color: rgb(206, 138, 138);
+    overflow: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+
+.col{
+    border: 5px solid black;
+}
+
+button{
+    border:none;
+    background:transparent;
+    color: rgb(124, 123, 157);
+    height: 100%;
+    width:50%;
+
+}
+
+.change-btn{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: rgba(255,255,255,1);
+    border-radius: 2em;
+    height: 2.2em;
+    width: 4.5em;
+    top:85%;
+    box-shadow: 0 1px 10px 2px rgba(0,0,0,0.5);
+}
+
+.text-content{
+    font-size: 1.2rem;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+}
+
+.paraTwo{
+    display: none;
+    .details{
+        color: red;
+    }
+}
+
+
+
+
+@media screen and (max-width:576px){
+    
+    .container-fluid{
+        background-image: url("./images/curve-mobile.png");
+        
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .img{
+        background-image: url("./images/background-mobile.png");
+        background-size:fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display:flex;
+        justify-content: center;
+        padding: 2em;
+        margin-top: 1em;
+        
+    }
+
+    .profile-img{
+        height: 15em;
+        width: 15em;
+        background-image: url("./images/image-tanya.jpg");
+        background-position: center center;
+        background-size: cover;
+        border-radius: 0.3em;
+
+        box-shadow: 0 20px 20px 10px rgba(0,0,0,0.5);
+        box-shadow: 0 20px 20px -10px rgba(0,0,0,0.5); /* negative spread to remove shadow from all other sides(except bottom)*/
+        
+    }
+
+    .change-btn{
+        left:40%;
+    }
+
+    .text-content{
+        background-position: center top;
+        background-image: url("./images/quotes-mobile.png");
+    }
+
+    
 }

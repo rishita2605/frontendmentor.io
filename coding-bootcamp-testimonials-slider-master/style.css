@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,5 +12,105 @@
 
 .attribution a {
   color: #3e52a3;
+}
+
+.container-fluid {
+  background-color: #ce8a8a;
+  overflow: hidden;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.col {
+  border: 5px solid black;
+}
+
+button {
+  border: none;
+  background: transparent;
+  color: #7c7b9d;
+  height: 100%;
+  width: 50%;
+}
+
+.change-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  background-color: white;
+  border-radius: 2em;
+  height: 2.2em;
+  width: 4.5em;
+  top: 85%;
+  -webkit-box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-content {
+  font-size: 1.2rem;
+  background-repeat: no-repeat;
+  border: 3px solid black;
+}
+
+.paraTwo {
+  display: none;
+}
+
+.paraTwo .details {
+  color: red;
+}
+
+@media screen and (max-width: 576px) {
+  .container-fluid {
+    background-image: url("./images/curve-mobile.png");
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .img {
+    background-image: url("./images/background-mobile.png");
+    background-size: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2em;
+    margin-top: 1em;
+  }
+  .profile-img {
+    height: 15em;
+    width: 15em;
+    background-image: url("./images/image-tanya.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5);
+    /* negative spread to remove shadow from all other sides(except bottom)*/
+  }
+  .change-btn {
+    left: 40%;
+  }
+  .text-content {
+    background-position: center top;
+    background-image: url("./images/quotes-mobile.png");
+  }
 }
 /*# sourceMappingURL=style.css.map */
