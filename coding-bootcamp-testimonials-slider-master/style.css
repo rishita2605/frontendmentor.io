@@ -3,6 +3,7 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .attribution {
@@ -15,15 +16,11 @@
 }
 
 .container-fluid {
-  background-color: #ce8a8a;
+  background-color: white;
   overflow: hidden;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: left bottom;
-}
-
-.col {
-  border: 5px solid black;
 }
 
 button {
@@ -54,16 +51,17 @@ button {
 
 .text-content {
   font-size: 1.2rem;
+  line-height: 1.5rem;
   background-repeat: no-repeat;
-  border: 3px solid black;
+  color: #7e7d89;
+}
+
+.para {
+  margin-top: 1.4em;
 }
 
 .paraTwo {
   display: none;
-}
-
-.paraTwo .details {
-  color: red;
 }
 
 @media screen and (max-width: 576px) {
@@ -111,6 +109,10 @@ button {
   .text-content {
     background-position: center top;
     background-image: url("./images/quotes-mobile.png");
+    margin-top: 1.8em;
+  }
+  .para {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
