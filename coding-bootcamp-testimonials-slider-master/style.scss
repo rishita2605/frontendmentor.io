@@ -41,25 +41,60 @@ button{
     height: 2.2em;
     width: 4.5em;
     top:85%;
-    box-shadow: 0 1px 10px 2px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 40px 2px rgba(54, 53, 68,0.5);
 }
 
 .text-content{
     font-size: 1.2rem;
     line-height: 1.5rem;
+    font-weight: 500;
     background-repeat: no-repeat;
-    color: rgb(126, 125, 137);
+    color: rgb(58, 60, 93);
     
 }
 .para{
     margin-top: 1.4em;
 }
+
+.paraOne{
+    opacity:1;
+    transition: opacity 300ms ease;
+
+}
 .paraTwo{
     display: none;
+    opacity:0;
+    transition: opacity 300ms ease;
 }
 
+.name{
+    color:rgb(54, 53, 68);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+.designation{
+    color: rgb(182, 181, 187);
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
 
+.container-fluid{
+    background-image: url("./images/curve-desktop.png");
+    
+}
 
+.img{
+    background-image: url("./images/background-mobile.png");
+    background-size:fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    padding: 2em;
+    margin-top: 1em;
+    
+}
 
 @media screen and (max-width:576px){
     
@@ -84,19 +119,32 @@ button{
         
     }
 
-    .profile-img{
-        height: 15em;
-        width: 15em;
-        background-image: url("./images/image-tanya.jpg");
-        background-position: center center;
-        background-size: cover;
-        border-radius: 0.3em;
+    @for $i from 1 through 2{
 
-        box-shadow: 0 20px 20px 10px rgba(0,0,0,0.5);
-        box-shadow: 0 20px 20px -10px rgba(0,0,0,0.5); /* negative spread to remove shadow from all other sides(except bottom)*/
-        
+        .profile-img-#{$i}{
+            height: 15em;
+            width: 15em;
+            background-image: url("./images/image-tanya.jpg");
+            background-position: center center;
+            background-size: cover;
+            border-radius: 0.3em;
+            box-shadow: 0 20px 20px 10px rgba(54, 53, 68,0.3);
+            box-shadow: 0 20px 20px -10px rgba(54, 53, 68,0.3); /* negative spread to remove shadow from all other sides(except bottom)*/
+            
+        }
     }
 
+    .profile-img{
+        display: flex;
+        flex-direction: row;
+        overflow: unset;
+    }
+    .profile-img-2{
+        display:none;
+        opacity: 0;
+        background-image: url("./images/image-john.jpg"); 
+        
+    }
     .change-btn{
         left:40%;
     }
@@ -110,6 +158,10 @@ button{
 
     .para{
         text-align: center;
+    }
+
+    .name{
+        margin-top: 1em;
     }
     
 }
