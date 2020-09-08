@@ -85,14 +85,43 @@ button{
 }
 
 .img{
-    background-image: url("./images/background-mobile.png");
+    background-image: url("./images/background-desktop.png");
     background-size:fixed;
     background-position: center center;
     background-repeat: no-repeat;
     display:flex;
     justify-content: center;
-    padding: 2em;
-    margin-top: 1em;
+    
+    
+}
+
+.row{
+    height: 100%;
+}
+
+@for $i from 1 through 2{
+
+    .profile-img-#{$i}{
+        height: 25em;
+        width: 25em;
+        background-image: url("./images/image-tanya.jpg");
+        background-position: center center;
+        background-size: cover;
+        border-radius: 0.3em;
+        box-shadow: 0 20px 20px 10px rgba(54, 53, 68,0.3);
+        box-shadow: 0 20px 20px -10px rgba(54, 53, 68,0.3); /* negative spread to remove shadow from all other sides(except bottom)*/
+        
+    }
+}
+
+.profile-img{
+    display: flex;
+    flex-direction: row;
+}
+.profile-img-2{
+    display:none;
+    opacity: 0;
+    background-image: url("./images/image-john.jpg"); 
     
 }
 
@@ -119,6 +148,8 @@ button{
         
     }
 
+
+
     @for $i from 1 through 2{
 
         .profile-img-#{$i}{
@@ -137,7 +168,6 @@ button{
     .profile-img{
         display: flex;
         flex-direction: row;
-        overflow: unset;
     }
     .profile-img-2{
         display:none;

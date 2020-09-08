@@ -92,7 +92,7 @@ button {
 }
 
 .img {
-  background-image: url("./images/background-mobile.png");
+  background-image: url("./images/background-desktop.png");
   background-size: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -102,8 +102,54 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2em;
-  margin-top: 1em;
+}
+
+.row {
+  height: 100%;
+}
+
+.profile-img-1 {
+  height: 25em;
+  width: 25em;
+  background-image: url("./images/image-tanya.jpg");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+  -webkit-box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+  /* negative spread to remove shadow from all other sides(except bottom)*/
+}
+
+.profile-img-2 {
+  height: 25em;
+  width: 25em;
+  background-image: url("./images/image-tanya.jpg");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+  -webkit-box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+  /* negative spread to remove shadow from all other sides(except bottom)*/
+}
+
+.profile-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile-img-2 {
+  display: none;
+  opacity: 0;
+  background-image: url("./images/image-john.jpg");
 }
 
 @media screen and (max-width: 576px) {
@@ -166,7 +212,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    overflow: unset;
   }
   .profile-img-2 {
     display: none;
