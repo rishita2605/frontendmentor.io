@@ -45,23 +45,111 @@ button {
   height: 2.2em;
   width: 4.5em;
   top: 85%;
-  -webkit-box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 40px 2px rgba(54, 53, 68, 0.5);
+          box-shadow: 0 1px 40px 2px rgba(54, 53, 68, 0.5);
 }
 
 .text-content {
   font-size: 1.2rem;
   line-height: 1.5rem;
+  font-weight: 500;
   background-repeat: no-repeat;
-  color: #7e7d89;
+  color: #3a3c5d;
 }
 
 .para {
   margin-top: 1.4em;
 }
 
+.paraOne {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
 .paraTwo {
   display: none;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.name {
+  color: #363544;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.designation {
+  color: #b6b5bb;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+.container-fluid {
+  background-image: url("./images/curve-desktop.png");
+}
+
+.img {
+  background-image: url("./images/background-desktop.png");
+  background-size: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row {
+  height: 100%;
+}
+
+.profile-img-1 {
+  height: 25em;
+  width: 25em;
+  background-image: url("./images/image-tanya.jpg");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+  -webkit-box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+  /* negative spread to remove shadow from all other sides(except bottom)*/
+}
+
+.profile-img-2 {
+  height: 25em;
+  width: 25em;
+  background-image: url("./images/image-tanya.jpg");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+  -webkit-box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+          box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+  /* negative spread to remove shadow from all other sides(except bottom)*/
+}
+
+.profile-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile-img-2 {
+  display: none;
+  opacity: 0;
+  background-image: url("./images/image-john.jpg");
 }
 
 @media screen and (max-width: 576px) {
@@ -90,18 +178,45 @@ button {
     padding: 2em;
     margin-top: 1em;
   }
-  .profile-img {
+  .profile-img-1 {
     height: 15em;
     width: 15em;
     background-image: url("./images/image-tanya.jpg");
     background-position: center center;
     background-size: cover;
     border-radius: 0.3em;
-    -webkit-box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+            box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+    -webkit-box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+            box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
     /* negative spread to remove shadow from all other sides(except bottom)*/
+  }
+  .profile-img-2 {
+    height: 15em;
+    width: 15em;
+    background-image: url("./images/image-tanya.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+            box-shadow: 0 20px 20px 10px rgba(54, 53, 68, 0.3);
+    -webkit-box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+            box-shadow: 0 20px 20px -10px rgba(54, 53, 68, 0.3);
+    /* negative spread to remove shadow from all other sides(except bottom)*/
+  }
+  .profile-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .profile-img-2 {
+    display: none;
+    opacity: 0;
+    background-image: url("./images/image-john.jpg");
   }
   .change-btn {
     left: 40%;
@@ -113,6 +228,9 @@ button {
   }
   .para {
     text-align: center;
+  }
+  .name {
+    margin-top: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */
